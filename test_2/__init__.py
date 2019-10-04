@@ -15,7 +15,7 @@ bl_info = {
     "name" : "test_2",
     "author" : "xiwei",
     "description" : "",
-    "blender" : (2, 80, 0),
+    "blender" : (2, 81, 0),
     "version" : (0, 0, 1),
     "location" : "",
     "warning" : "",
@@ -28,8 +28,8 @@ from . PT_Panel import PanelOne , PanelTwo
 
 from . operators import addCubeSample
 
-from . modal_op import ModalOperator
+from . modal_op import ModalOperator , ModalDrawOperator , ModalTimerOperator
 
-classes = (PanelOne,PanelTwo, addCubeSample, ModalOperator)
+classes = (PanelOne,PanelTwo, addCubeSample, ModalOperator, ModalDrawOperator,ModalTimerOperator)
 
 register, unregister = bpy.utils.register_classes_factory(classes)

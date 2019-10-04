@@ -1,9 +1,5 @@
 import bpy
 
-
-
-
-
 class View3DPanel:
     bl_space_type = 'VIEW_3D'
     bl_category = "Tool"
@@ -14,15 +10,13 @@ class View3DPanel:
 
 
 class View3DPanelUI(View3DPanel):
-
     bl_region_type = 'UI'
 
 class View3DPanelTools(View3DPanel):
-
     bl_region_type = 'TOOLS'
 
 
-class PanelOne(View3DPanel, bpy.types.Panel):
+class PanelOne(View3DPanelUI, bpy.types.Panel):
     bl_idname = "VIEW3D_PT_test_1"
     bl_label = "Panel One"
 
@@ -30,7 +24,7 @@ class PanelOne(View3DPanel, bpy.types.Panel):
         self.layout.label(text="Small Class")
 
 
-class PanelTwo(View3DPanel, bpy.types.Panel):
+class PanelTwo(View3DPanelUI, bpy.types.Panel):
     bl_idname = "VIEW3D_PT_test_2"
     bl_label = "Panel Two"
 
